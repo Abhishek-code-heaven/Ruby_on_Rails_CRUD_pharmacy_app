@@ -1,0 +1,37 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  patient_id: MyString
+  integer: MyString
+  patient_name: MyString
+  gender: MyString
+  string: MyString
+  age: MyString
+  string: MyString
+  email: MyString
+  string: MyString
+  phone_number: MyString
+  string: MyString
+  delivery_address: MyString
+  string: MyString
+  prescription_medicines: MyString
+  delivery_details: MyString
+  string: MyString
+
+two:
+  patient_id: MyString
+  integer: MyString
+  patient_name: MyString
+  gender: MyString
+  string: MyString
+  age: MyString
+  string: MyString
+  email: MyString
+  string: MyString
+  phone_number: MyString
+  string: MyString
+  delivery_address: MyString
+  string: MyString
+  prescription_medicines: MyString
+  delivery_details: MyString
+  string: MyString

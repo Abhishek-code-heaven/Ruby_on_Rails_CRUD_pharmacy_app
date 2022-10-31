@@ -1,0 +1,21 @@
+<p style="color: green"><%= notice %></p>
+<div class="jumbotron">
+  <h1 class="display-4">
+    <%= @pharmaceutical.name %>
+  </h1>
+  <%= render @pharmaceutical %>
+  <hr class="my-4">
+
+  <div>
+  <%= link_to "Edit this Customer", edit_pharmaceutical_path(@pharmaceutical),class:"btn btn-secondary btn-sm" %> |
+  <%= link_to "Back to Customer Data", pharmaceuticals_path ,class:"btn btn-secondary btn-sm"%>
+  
+  </div>
+  <div>
+    <p>
+<%= button_to "Delete this Customer", @pharmaceutical, method: :delete ,class:"btn btn-secondary btn-sm"%>
+</p>
+ </div>
+</div>
+
+

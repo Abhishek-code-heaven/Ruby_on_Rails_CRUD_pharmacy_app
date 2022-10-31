@@ -1,0 +1,57 @@
+<%= form_with(model: pharmaceutical) do |form| %>
+  <% if pharmaceutical.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(pharmaceutical.errors.count, "error") %> prohibited this pharmaceutical from being saved:</h2>
+
+      <ul>
+        <% pharmaceutical.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :patient_id, style: "display: block" %>
+    <%= form.text_field :patient_id %>
+  </div>
+
+  <div>
+    <%= form.label :name, style: "display: block" %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.label :gender, style: "display: block" %>
+    <%= form.text_field :gender %>
+  </div>
+
+  <div>
+    <%= form.label :age, style: "display: block" %>
+    <%= form.text_field :age %>
+  </div>
+
+  <div>
+    <%= form.label :email, style: "display: block" %>
+    <%= form.text_field :email %>
+  </div>
+
+  <div>
+    <%= form.label :phone_number, style: "display: block" %>
+    <%= form.text_field :phone_number %>
+  </div>
+
+  <div>
+    <%= form.label :prescription_medicines, style: "display: block" %>
+    <%= form.text_field :prescription_medicines %>
+  </div>
+
+  <div>
+    <%= form.label :delivery_address, style: "display: block" %>
+    <%= form.text_field :delivery_address %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

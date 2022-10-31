@@ -1,0 +1,46 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Pharmaceuticals</h1>
+
+<table class="table table-striped table-bordered table-hover">
+    <thead class="thead-dark">
+      <tr>
+        <th>Patient Id</th>
+        <th>Name</th>
+        <th>Gender</th>
+        <th>Age</th>
+        <th>Email</th>
+        <th>Phone number</th>
+        <th>Prescription medicines</th>
+        <th>Delivery address</th>
+        <th>Delete Customer</th>
+        <th>Edit Customer</th>
+        <th>Show Customer</th>
+      </tr>
+    </thead>
+
+    <tbody>
+   <tr>
+         
+  <% @pharmaceuticals.each do |pharmaceutical| %>
+    
+    <td><%= pharmaceutical.patient_id %></td>
+    <td><%= pharmaceutical.name %></td>
+    <td><%= pharmaceutical.gender %></td>
+    <td><%= pharmaceutical.age %></td>
+    <td><%= pharmaceutical.email %></td>
+    <td><%= pharmaceutical.phone_number %></td>
+    <td><%= pharmaceutical.prescription_medicines %></td>
+    <td><%= pharmaceutical.delivery_address %></td>
+    <td><%= link_to 'Delete', pharmaceutical, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-outline-danger btn-sm" %></td>
+    <td><%= link_to 'Edit Customer', pharmaceutical , method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-outline-danger btn-sm" %></td>
+    <td><%= link_to 'Show Customer', pharmaceutical, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-outline-danger btn-sm" %></td>
+
+</tr>
+
+  <% end %>
+
+    </tbody>
+
+  </table>
+ <%= link_to 'Add Customer', new_pharmaceutical_path, class:"btn btn-secondary btn-lg" %>
